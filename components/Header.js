@@ -6,11 +6,13 @@ export default function Header() {
       <header className="header">
         <nav className="nav" role="navigation" aria-label="main navigation">
           <Link href="/">
-            <a>Demo Blog</a>
+            <a>
+              Build Industrial Furniture
+            </a>
           </Link>
-          <Link href="/about">
+          {/* <Link href="/about">
             <a>About</a>
-          </Link>
+          </Link> */}
         </nav>
       </header>
       <style jsx>{`
