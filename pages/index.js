@@ -7,7 +7,7 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
       <Layout pageTitle={title} description={description}>
-        <h1 className="title">Your Source of Industrial Style Furniture Building Tips and Info</h1>
+        <h1 className="title">The Industrial Furniture Making Blog</h1>
         <h2>Helping You to Make Furniture From Metal and Wood, The Easy Way</h2>
         <main>
           <PostList posts={posts} />
