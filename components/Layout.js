@@ -9,16 +9,17 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="Description" content={description}></meta>
-        <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-70072493-5"
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'UA-70072493-5');
-              `
-            }}
-          />
+        <script src="https://www.googletagmanager.com/gtag/js?id=UA-70072493-5" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-70072493-5');
+              `,
+          }}
+        />
 
         <title>{pageTitle}</title>        
       </Head>
