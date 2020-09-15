@@ -9,7 +9,23 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="Description" content={description}></meta>
-        <title>{pageTitle}</title>
+        <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70072493-5"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-70072493-5');
+              </script>
+              `
+            }}
+          />
+
+        <title>{pageTitle}</title>        
       </Head>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap');
