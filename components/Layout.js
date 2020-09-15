@@ -9,18 +9,13 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="Description" content={description}></meta>
-        <script
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70072493-5"
             dangerouslySetInnerHTML={{
               __html: `
-              <!-- Global site tag (gtag.js) - Google Analytics -->
-              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70072493-5"></script>
-              <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-
                 gtag('config', 'UA-70072493-5');
-              </script>
               `
             }}
           />
