@@ -1,6 +1,9 @@
 import Head from 'next/head'
-
 import Header from './Header'
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-70072493-5');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 export default function Layout({ children, pageTitle, description, ...props }) {
   return (
@@ -9,7 +12,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="Description" content={description}></meta>
-        <script src="https://www.googletagmanager.com/gtag/js?id=UA-70072493-5" />
+        {/* <script src="https://www.googletagmanager.com/gtag/js?id=UA-70072493-5" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -19,7 +22,7 @@ export default function Layout({ children, pageTitle, description, ...props }) {
             gtag('config', 'UA-70072493-5');
               `,
           }}
-        />
+        /> */}
 
         <title>{pageTitle}</title>        
       </Head>
