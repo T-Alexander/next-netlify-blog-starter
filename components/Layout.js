@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import Header from './Header'
-import ReactGA from 'react-ga';
-ReactGA.initialize('UA-70072493-5');
-ReactGA.pageview(window.location.pathname + window.location.search);
+//import ReactGA from 'react-ga';
+// ReactGA.initialize('UA-70072493-5');
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 export default function Layout({ children, pageTitle, description, ...props }) {
   return (
     <>
       <Head>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="Description" content={description}></meta>
@@ -24,8 +25,15 @@ export default function Layout({ children, pageTitle, description, ...props }) {
           }}
         /> */}
 
+<script dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-UA-70072493-5');`}} />
+
         <title>{pageTitle}</title>        
       </Head>
+      <noscript dangerouslySetInnerHTML={{__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-UA-70072493-5" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`}} />
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap');
 
